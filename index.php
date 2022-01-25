@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <?php include "head.php"; ?>
 
         <body id="page-top">
