@@ -38,7 +38,16 @@
 
                 }
                 echo "</table>";
+
+
+$resultat3=$connexion->query("SELECT max(CA_Vente) as maxvente FROM vente");
+            $ligne3=$resultat3->fetch_assoc();
+$resultat4= $connexion->query("SELECT Nom_Commercial FROM vente,commercial 
+        WHERE vente.Id_Com=commercial.Id_Commercial and CA_Vente=".$ligne3['maxvente']."");
+            $ligne4=$resultat4->fetch_assoc();
                 
+            echo "Le chiffre d'affaire maximum est ". $ligne3['maxvente']."</br>";
+            echo "le meilleur comercial est " . $ligne4['Nom_Commercial'];
                 ?>
 
             </div>
