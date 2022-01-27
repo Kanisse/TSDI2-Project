@@ -14,6 +14,7 @@
                 <th>Nom</th>
                 <th>Nombre de ventes</th>
                 <th>NCA Total</th>
+                <th></th><th></th>
                 </tr>";
                 while ($ligne=$resultat->fetch_assoc()){
 
